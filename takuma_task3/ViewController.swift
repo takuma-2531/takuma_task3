@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet weak private var firstNumberTextField: UITextField!
     @IBOutlet weak private var secondNumberTextField: UITextField!
     @IBOutlet weak private var firstNumberSignSwitch: UISwitch!
@@ -30,23 +29,13 @@ class ViewController: UIViewController {
         let firstSwitchInOn = firstNumberSignSwitch.isOn
         let secondSwitchInOn = secondNumberSignSwitch.isOn
 
-        let addSignFirstNumber = addSign(number: firstNumber, switchIsOn: firstSwitchInOn)
-        let addSignSecondNumber = addSign(number: secondNumber, switchIsOn: secondSwitchInOn)
+        let signedFirstNumber = firstSwitchInOn ? -firstNumber : +firstNumber
+        let signedSecondNumber = secondSwitchInOn ? -secondNumber : +secondNumber
 
-        let answerText = addSignFirstNumber + addSignSecondNumber
+        let answerText = signedFirstNumber + signedSecondNumber
 
-        firstNumberLabel.text = String(addSignFirstNumber)
-        secondNumberLabel.text = String(addSignSecondNumber)
+        firstNumberLabel.text = String(signedFirstNumber)
+        secondNumberLabel.text = String(signedSecondNumber)
         answerLabel.text = String(answerText)
-    }
-
-    func addSign(number: Int, switchIsOn: Bool) -> Int {
-        let addSignNumber: Int
-        if switchIsOn {
-            addSignNumber = -number
-        } else {
-            addSignNumber = +number
-        }
-        return addSignNumber
     }
 }
