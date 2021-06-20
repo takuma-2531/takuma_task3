@@ -44,6 +44,9 @@
                                     <constraint firstAttribute="width" constant="46" id="nWL-b2-aXI"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tapCalculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8sd-ar-RuO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OK-CK-XPn">
                                 <rect key="frame" x="26" y="58" width="11" height="21"/>
@@ -126,6 +129,15 @@
                             <constraint firstItem="0Ss-M5-KOc" firstAttribute="centerY" secondItem="0OK-CK-XPn" secondAttribute="centerY" id="yao-lm-fh5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="AJT-LH-niU" id="pcg-Xp-cDd"/>
+                        <outlet property="firstNumberLabel" destination="VJr-uE-PYo" id="uA5-uq-g2O"/>
+                        <outlet property="firstNumberSignSwitch" destination="FD8-H8-UUP" id="skM-yW-v6V"/>
+                        <outlet property="firstNumberTextField" destination="uJk-cd-Iri" id="aQX-uP-FNa"/>
+                        <outlet property="secondNumberLabel" destination="rAJ-MH-Fcv" id="8L2-gu-Q9u"/>
+                        <outlet property="secondNumberSignSwitch" destination="oib-4s-LjP" id="mhr-cX-7zk"/>
+                        <outlet property="secondNumberTextField" destination="aR8-B2-5Sn" id="Oiw-M9-zZg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
