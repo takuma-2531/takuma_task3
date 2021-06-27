@@ -26,11 +26,9 @@ class ViewController: UIViewController {
     @IBAction private func tapCalculateButton(_ sender: UIButton) {
         let firstNumber = Int(firstNumberTextField.text!) ?? 0
         let secondNumber = Int(secondNumberTextField.text!) ?? 0
-        let firstSwitchInOn = firstNumberSignSwitch.isOn
-        let secondSwitchInOn = secondNumberSignSwitch.isOn
 
-        let signedFirstNumber = firstSwitchInOn ? -firstNumber : +firstNumber
-        let signedSecondNumber = secondSwitchInOn ? -secondNumber : +secondNumber
+        let signedFirstNumber = firstNumberSignSwitch.isOn ? -firstNumber : firstNumber
+        let signedSecondNumber = secondNumberSignSwitch.isOn ? -secondNumber : secondNumber
 
         let answerText = signedFirstNumber + signedSecondNumber
 
